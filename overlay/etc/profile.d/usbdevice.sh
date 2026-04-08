@@ -3,7 +3,8 @@
 # The env variables below can be overridden
 
 # option: adb acm hid mtp ntb rndis uac1 uac2 ums uvc
-export USB_FUNCS="rndis"
+export USB_FUNCS="adb"
+#export USB_FUNCS="rndis"
 
 export UMS_FILE=/ums_shared.img
 export UMS_SIZE=256M

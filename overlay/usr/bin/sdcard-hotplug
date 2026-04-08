@@ -1,0 +1,38 @@
+#!/bin/sh
+set -eu
+
+ACTION="$1"
+DEVNAME="$2"
+DEV="/dev/$DEVNAME"
+BASE="/media/sdcard"
+MOUNT_POINT="$BASE/$DEVNAME"
+
+case "$ACTION" in
+    add)
+        [ -b "$DEV" ] || exit 0
+
+        mkdir -p "$MOUNT_POINT"
+
+        if mountpoint -q "$MOUNT_POINT"; then
+            exit 0
+        fi
+
+        if findmnt -rn -S "$DEV" >/dev/null 2>&1; then
+            exit 0
+        fi
+
+        mount "$DEV" "$MOUNT_POINT"
+        ;;
+
+    remove)
+        if mountpoint -q "$MOUNT_POINT"; then
+            umount "$MOUNT_POINT" || umount -l "$MOUNT_POINT" || true
+        fi
+        rmdir "$MOUNT_POINT" 2>/dev/null || true
+        ;;
+
+    *)
+        echo "Usage: $0 {add|remove} <devname>" >&2
+        exit 1
+        ;;
+esac

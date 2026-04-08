@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto mount SD partition %I
+BindsTo=dev-%i.device
+After=dev-%i.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/sdcard-hotplug add %I
+ExecStop=/usr/bin/sdcard-hotplug remove %I
+
+[Install]
+WantedBy=multi-user.target
