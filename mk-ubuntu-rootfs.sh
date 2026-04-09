@@ -203,7 +203,7 @@ export APT_INSTALL="apt-get install -fy --allow-downgrades"
 echo -e "\033[47;36m ---------- LubanCat -------- \033[0m"
 apt purge initramfs-tools -y
 
-\${APT_INSTALL} dialog toilet u-boot-tools edid-decode logrotate fire-config lbc-test
+\${APT_INSTALL} dialog toilet u-boot-tools edid-decode logrotate fire-config
 if [[ "$TARGET" == "gnome" || "$TARGET" == "gnome-full" ]]; then
     \${APT_INSTALL} gdisk fire-config-gui
     #Desktop background picture
