@@ -1,6 +1,5 @@
 Ubuntu 20.04 LTS GNU/Linux \n \l
 
-[username:password] root:root cat:temppwd
+[username:password] root:root xingliancx:xingliancx
 
 Modify information : /etc/issue
-

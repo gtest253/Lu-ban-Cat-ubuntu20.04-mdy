@@ -163,13 +163,13 @@ pip3 install python-periphery Adafruit-Blinka -i https://mirrors.aliyun.com/pypi
 HOST=lubancat
 
 # Create User
-useradd -G sudo -m -s /bin/bash cat
-passwd cat <<IEOF
-temppwd
-temppwd
+useradd -G sudo -m -s /bin/bash xingliancx
+passwd xingliancx <<IEOF
+xingliancx
+xingliancx
 IEOF
-gpasswd -a cat video
-gpasswd -a cat audio
+gpasswd -a xingliancx video
+gpasswd -a xingliancx audio
 passwd root <<IEOF
 root
 root
@@ -231,4 +231,3 @@ EOF
 DATE=$(date +%Y%m%d)
 echo -e "\033[47;36m Run tar pack ubuntu-base-$TARGET-$ARCH-$DATE.tar.gz \033[0m"
 sudo tar zcf ubuntu-base-$TARGET-$ARCH-$DATE.tar.gz $TARGET_ROOTFS_DIR
-
