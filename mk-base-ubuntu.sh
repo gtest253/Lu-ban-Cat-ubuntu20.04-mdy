@@ -160,7 +160,7 @@ fi
 
 pip3 install python-periphery Adafruit-Blinka -i https://mirrors.aliyun.com/pypi/simple/
 
-HOST=lubancat
+HOST=xinglian
 
 # Create User
 useradd -G sudo -m -s /bin/bash xingliancx
@@ -179,7 +179,15 @@ IEOF
 sed -i '/pam_securetty.so/s/^/# /g' /etc/pam.d/login
 
 # hostname
-echo lubancat > /etc/hostname
+echo "\${HOST}" > /etc/hostname
+if ! grep -q '^127\.0\.0\.1[[:space:]]\+localhost' /etc/hosts; then
+    printf '127.0.0.1\tlocalhost\n' >> /etc/hosts
+fi
+if grep -q '^127\.0\.1\.1[[:space:]]' /etc/hosts; then
+    sed -i "s/^127\\.0\\.1\\.1[[:space:]].*/127.0.1.1\t\${HOST}/" /etc/hosts
+else
+    printf '127.0.1.1\t%s\n' "\${HOST}" >> /etc/hosts
+fi
 
 # set localtime
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime

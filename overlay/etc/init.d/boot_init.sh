@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 ### BEGIN INIT INFO
-# Provides:          LubanCat
+# Provides:          xinglian
 # Required-Start:
 # Required-Stop:
 # Default-Start:
@@ -16,13 +16,13 @@ board_info() {
 	if [[ "$2" == "rk3128" ]]; then
 		case $1 in
 			0000)
-				BOARD_NAME='LubanCat-0H'
+				BOARD_NAME='xinglian-0H'
 				BOARD_DTB='rk3128-lubancat-0h.dtb'
 				BOARD_uEnv='uEnvLubanCat0H.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK3128'
+				BOARD_NAME='xinglian-RK3128'
 				BOARD_DTB='rk3128-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
@@ -30,23 +30,23 @@ board_info() {
 	elif [[ "$2" == "rk3528" ||  "$2" == "rk3528a" ]]; then
 		case $1 in
 			0001)
-				BOARD_NAME='LubanCat-Q1'
+				BOARD_NAME='xinglian-Q1'
 				BOARD_DTB='rk3528-lubancat-q1.dtb'
 				BOARD_uEnv='uEnvLubanCatQ1.txt'
 				;;
 			0002)
-				BOARD_NAME='LubanCat-Q1IO'
+				BOARD_NAME='xinglian-Q1IO'
 				BOARD_DTB='rk3528-lubancat-q1io.dtb'
 				BOARD_uEnv='uEnvLubanCatQ1IO.txt'
 				;;
 			0007)
-				BOARD_NAME='LubanCat-Q1IO-test'
+				BOARD_NAME='xinglian-Q1IO-test'
 				BOARD_DTB='rk3528-lubancat-q1io-test.dtb'
 				BOARD_uEnv='uEnvLubanCatQ1IO-test.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK3528'
+				BOARD_NAME='xinglian-RK3528'
 				BOARD_DTB='rk3528-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
@@ -54,28 +54,28 @@ board_info() {
 	elif [[ "$2" == "rk3562" ]]; then
 		case $1 in
 			0000)
-				BOARD_NAME='LubanCat-1HS'
+				BOARD_NAME='xinglian-1HS'
 				BOARD_DTB='rk3562-lubancat-1hs.dtb'
 				BOARD_uEnv='uEnvLubanCat1HS.txt'
 				;;
 			0007)
-				BOARD_NAME='LubanCat-1HS-test'
+				BOARD_NAME='xinglian-1HS-test'
 				BOARD_DTB='rk3562-lubancat-1hs-test.dtb'
 				BOARD_uEnv='uEnvLubanCat1HS-test.txt'
 				;;
 			0100)
-				BOARD_NAME='LubanCat-1HSI'
+				BOARD_NAME='xinglian-1HSI'
 				BOARD_DTB='rk3562-lubancat-1hs.dtb'
 				BOARD_uEnv='uEnvLubanCat1HS.txt'
 				;;
 			0107)
-				BOARD_NAME='LubanCat-1HS-test'
+				BOARD_NAME='xinglian-1HS-test'
 				BOARD_DTB='rk3562-lubancat-1hs-test.dtb'
 				BOARD_uEnv='uEnvLubanCat1HS-test.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK3562'
+				BOARD_NAME='xinglian-RK3562'
 				BOARD_DTB='rk3562-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
@@ -83,109 +83,109 @@ board_info() {
 	elif [[ "$2" == "rk3566" ||  "$2" == "rk3568" ]]; then
 		case $1 in
 			0000)
-				BOARD_NAME='LubanCat-1'
+				BOARD_NAME='xinglian-1'
 				BOARD_DTB='rk3566-lubancat-1.dtb'
 				BOARD_uEnv='uEnvLubanCat1.txt'
 				;;
 			0001)
-				BOARD_NAME='LubanCat-1IOF'
+				BOARD_NAME='xinglian-1IOF'
 				BOARD_DTB='rk3566-lubancat-1io.dtb'
 				BOARD_uEnv='uEnvLubanCat1IO.txt'
 				;;
 			0002)
-				BOARD_NAME='LubanCat-1IOB'
+				BOARD_NAME='xinglian-1IOB'
 				BOARD_DTB='rk3566-lubancat-1io.dtb'
 				BOARD_uEnv='uEnvLubanCat1IO.txt'
 				;;
 			0007)
-				BOARD_NAME='LubanCat-1IO-test'
+				BOARD_NAME='xinglian-1IO-test'
 				BOARD_DTB='rk3566-lubancat-1io-test.dtb'
 				BOARD_uEnv='uEnvLubanCat1IO-test.txt'
 				;;
 			0100)
-				BOARD_NAME='LubanCat-1N'
+				BOARD_NAME='xinglian-1N'
 				BOARD_DTB='rk3566-lubancat-1n.dtb'
 				BOARD_uEnv='uEnvLubanCat1N.txt'
 				;;
 			0102)
-				BOARD_NAME='LubanCat-2IOBI'
+				BOARD_NAME='xinglian-2IOBI'
 				BOARD_DTB='rk3568-lubancat-2io.dtb'
 				BOARD_uEnv='uEnvLubanCat2IO.txt'
 				;;
 			0200)
-				BOARD_NAME='LubanCat-0N'
+				BOARD_NAME='xinglian-0N'
 				BOARD_DTB='rk3566-lubancat-0.dtb'
 				BOARD_uEnv='uEnvLubanCatZN.txt'
 				;;
 			0201)
-				BOARD_NAME='LubanCat-1H'
+				BOARD_NAME='xinglian-1H'
 				BOARD_DTB='rk3566-lubancat-1h.dtb'
 				BOARD_uEnv='uEnvLubanCat1H.txt'
 				;;
 			0300)
-				BOARD_NAME='LubanCat-0W'
+				BOARD_NAME='xinglian-0W'
 				BOARD_DTB='rk3566-lubancat-0.dtb'
 				BOARD_uEnv='uEnvLubanCatZW.txt'
 				;;
 			0304)
-				BOARD_NAME='LubanCat-CM4'
+				BOARD_NAME='xinglian-CM4'
 				BOARD_DTB='rk3566-lubancat-cm4.dtb'
 				BOARD_uEnv='uEnvLubanCatCM4.txt'
 				;;
 			0400)
-				BOARD_NAME='LubanCat-2'
+				BOARD_NAME='xinglian-2'
 				BOARD_DTB='rk3568-lubancat-2.dtb'
 				BOARD_uEnv='uEnvLubanCat2.txt'
 				;;
 			0402)
-				BOARD_NAME='LubanCat-2 v1'
+				BOARD_NAME='xinglian-2 v1'
 				BOARD_DTB='rk3568-lubancat-2-v1.dtb'
 				BOARD_uEnv='uEnvLubanCat2-V1.txt'
 				;;
 			0403)
-				BOARD_NAME='LubanCat-2 v2'
+				BOARD_NAME='xinglian-2 v2'
 				BOARD_DTB='rk3568-lubancat-2-v2.dtb'
 				BOARD_uEnv='uEnvLubanCat2-V2.txt'
 				;;
 			0404)
-				BOARD_NAME='LubanCat-2 v3'
+				BOARD_NAME='xinglian-2 v3'
 				BOARD_DTB='rk3568-lubancat-2-v3.dtb'
 				BOARD_uEnv='uEnvLubanCat2-V3.txt'
 				;;
 			0500 |\
 			0600)
-				BOARD_NAME='LubanCat-2N'
+				BOARD_NAME='xinglian-2N'
 				BOARD_DTB='rk3568-lubancat-2n.dtb'
 				BOARD_uEnv='uEnvLubanCat2N.txt'
 				;;
 			0501)
-				BOARD_NAME='LubanCat-2N v2'
+				BOARD_NAME='xinglian-2N v2'
 				BOARD_DTB='rk3568-lubancat-2n-v2.dtb'
 				BOARD_uEnv='uEnvLubanCat2N-V2.txt'
 				;;
 			0502)
-				BOARD_NAME='LubanCat-2N v3'
+				BOARD_NAME='xinglian-2N v3'
 				BOARD_DTB='rk3568-lubancat-2n-v3.dtb'
 				BOARD_uEnv='uEnvLubanCat2N-V3.txt'
 				;;
 			0601)
-				BOARD_NAME='LubanCat-2H'
+				BOARD_NAME='xinglian-2H'
 				BOARD_DTB='rk3568-lubancat-2h.dtb'
 				BOARD_uEnv='uEnvLubanCat2H.txt'
 				;;
 			0700)
-				BOARD_NAME='LubanCat-2IOF'
+				BOARD_NAME='xinglian-2IOF'
 				BOARD_DTB='rk3568-lubancat-2io.dtb'
 				BOARD_uEnv='uEnvLubanCat2IO.txt'
 				;;
 			0701)
-				BOARD_NAME='LubanCat-2IOB'
+				BOARD_NAME='xinglian-2IOB'
 				BOARD_DTB='rk3568-lubancat-2io.dtb'
 				BOARD_uEnv='uEnvLubanCat2IO.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK356X'
+				BOARD_NAME='xinglian-RK356X'
 				BOARD_DTB='rk356x-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
@@ -193,28 +193,28 @@ board_info() {
 	elif [[ "$2" == "rk3576" ]]; then
 			case $1 in
 			0000)
-				BOARD_NAME='LubanCat-3'
+				BOARD_NAME='xinglian-3'
 				BOARD_DTB='rk3576-lubancat-3.dtb'
 				BOARD_uEnv='uEnvLubanCat3.txt'
 				;;
 			0001)
-				BOARD_NAME='LubanCat-3IO'
+				BOARD_NAME='xinglian-3IO'
 				BOARD_DTB='rk3576-lubancat-3io.dtb'
 				BOARD_uEnv='uEnvLubanCat3IO.txt'
 				;;
 			0100)
-				BOARD_NAME='LubanCat-3 v2'
+				BOARD_NAME='xinglian-3 v2'
 				BOARD_DTB='rk3576-lubancat-3-v2.dtb'
 				BOARD_uEnv='uEnvLubanCat3-V2.txt'
 				;;
 			0707)
-				BOARD_NAME='LubanCat-3-ddr-emmc-test'
+				BOARD_NAME='xinglian-3-ddr-emmc-test'
 				BOARD_DTB='rk3576-lubancat-3-ddr-emmc-test.dtb'
 				BOARD_uEnv='uEnvLubanCat3-ddr-emmc-test.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK3576'
+				BOARD_NAME='xinglian-RK3576'
 				BOARD_DTB='rk3576-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
@@ -222,53 +222,53 @@ board_info() {
 	elif [[ "$2" == "rk3588" ||  "$2" == "rk3588s" ]]; then
 			case $1 in
 			0101)
-				BOARD_NAME='LubanCat-4'
+				BOARD_NAME='xinglian-4'
 				BOARD_DTB='rk3588s-lubancat-4.dtb'
 				BOARD_uEnv='uEnvLubanCat4.txt'
 				;;
 			0102)
-				BOARD_NAME='LubanCat-4 v1'
+				BOARD_NAME='xinglian-4 v1'
 				BOARD_DTB='rk3588s-lubancat-4-v1.dtb'
 				BOARD_uEnv='uEnvLubanCat4-V1.txt'
 				;;
 			0201)
-				BOARD_NAME='LubanCat-4IOF'
+				BOARD_NAME='xinglian-4IOF'
 				BOARD_DTB='rk3588s-lubancat-4io.dtb'
 				BOARD_uEnv='uEnvLubanCat4IO.txt'
 				;;
 			0301)
-				BOARD_NAME='LubanCat-4IOB'
+				BOARD_NAME='xinglian-4IOB'
 				BOARD_DTB='rk3588s-lubancat-4io.dtb'
 				BOARD_uEnv='uEnvLubanCat4IO.txt'
 				;;
 			0401)
-				BOARD_NAME='LubanCat-5'
+				BOARD_NAME='xinglian-5'
 				BOARD_DTB='rk3588-lubancat-5.dtb'
 				BOARD_uEnv='uEnvLubanCat5.txt'
 				;;
 			0402)
-				BOARD_NAME='LubanCat-5 v2'
+				BOARD_NAME='xinglian-5 v2'
 				BOARD_DTB='rk3588-lubancat-5-v2.dtb'
 				BOARD_uEnv='uEnvLubanCat5-V2.txt'
 				;;
 			0501)
-				BOARD_NAME='LubanCat-5IOF'
+				BOARD_NAME='xinglian-5IOF'
 				BOARD_DTB='rk3588-lubancat-5io.dtb'
 				BOARD_uEnv='uEnvLubanCat5IO.txt'
 				;;
 			0601)
-				BOARD_NAME='LubanCat-5IOB'
+				BOARD_NAME='xinglian-5IOB'
 				BOARD_DTB='rk3588-lubancat-5io.dtb'
 				BOARD_uEnv='uEnvLubanCat5IO.txt'
 				;;
 			0701)
-				BOARD_NAME='LubanCat-5IOBI'
+				BOARD_NAME='xinglian-5IOBI'
 				BOARD_DTB='rk3588-lubancat-5ioi.dtb'
 				BOARD_uEnv='uEnvLubanCat5IO.txt'
 				;;
 			*)
 				echo "Device ID Error !!!"
-				BOARD_NAME='LubanCat-RK3588'
+				BOARD_NAME='xinglian-RK3588'
 				BOARD_DTB='rk3588-lubancat-generic.dtb'
 				BOARD_uEnv='uEnvLubanCat.txt'
 				;;
